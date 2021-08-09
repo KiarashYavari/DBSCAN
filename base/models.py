@@ -2,7 +2,7 @@
 # cluster model for all cluster tables
 import pandas as pd
 
-# create models from each cluster
+# create a model for all clusters
 from django.db import models
 
 dataset = pd.read_csv('E://Prj-karshenasi/webApp_codes/files/edited_dataset.csv')

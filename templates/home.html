@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MrAdvisor.com</title>
+</head>
+<body>
+<form action="/base/recommend.py" method="post">
+    {% csrf_token %}
+    <label for="p_factors">چهار فاکتور MBTI شما:</label>
+    <input type="text" id="p_factors" name="p_factors" placeholder="INJT"><br>
+    <input type="submit" value="بررسی کن!">
+</form>
+</body>
+</html>
