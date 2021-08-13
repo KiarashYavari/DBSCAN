@@ -1,6 +1,6 @@
 # create my views here
 # render html files in template folder
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 
 from .forms import PersonalityFactors
@@ -27,3 +27,18 @@ def get_personality(request):
         form = PersonalityFactors()
 
     return render(request, 'home.html', {'form': form})
+
+
+def about_us_view(request):
+    explanation = "این سایت یک سایت توصیه گر است. هدف ما کمک به شما است تا بر اساس نتیجه ی تست شخصیت مایرزبریگز خود " \
+                  "بتوانید مناسب ترین مهارت جهت فراگیری را انتخاب کنید. در صورتی که مهارتی را تسلط دارید نیز میتوانید " \
+                  ".از طریق بخش تکمیل پرسشنامه مارا در این مسیر یاری دهید "
+    return render(request, 'about_us.html', {'explanation': explanation})
+
+
+def contact_us_view(request):
+    contact_info = {
+        'Email': 'MrAdvisor.com@gmail.com',
+        'Phone_Number': '09130177811',
+    }
+    return render(request, 'contact_us.html', {'contact_info': contact_info})

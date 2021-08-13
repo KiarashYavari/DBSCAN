@@ -1,12 +1,18 @@
 body{
-    background: url('images/alberto-bigoni-M6Yb-W0Ry8c-unsplash.jpg') no-repeat center fixed;
+    background: url('images/background_photo.jpg') no-repeat center fixed;
     background-size: 100% 100%;
 }
 .main_form{
     alignment: right;
     text-align: right;
     color: white;
-    margin: 18vw 43vw ;
+    margin: 7vw 40vw 22vw 35vw;
+}
+.main_form h3{
+    min-width: -webkit-max-content;
+    min-height: fit-content;
+    min-font-size: 14pt;
+    text-align: right;
 }
 #form_button{
     color: white;
@@ -27,4 +33,86 @@ body{
     min-width: 100px;
     min-height: 50px;
 }
+/* logo style begin*/
+#MrAdviser_logo img{
+    height: 5vw;
+    width: 5vw;
+    margin: 0.01vw 0.01vw 0.01vw 86vw;
+    min-height: 50px;
+    min-width: 50px;
+}
+/*logo style end*/
+
+/* bottom menu design*/
+#bottom_menu ul{
+  border-radius: 50px;
+  border-style: solid;
+  border-color: azure;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: azure;
+}
+
+#bottom_menu li {
+   alignment: center;
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#about_us{
+     margin: 5px 40vw 5px 2vw;
+     min-width: content-box;
+}
+#about_us_content{
+    text-align: right;
+    alignment: center;
+    color: white;
+    border-radius: 50px;
+    border-color: blue;
+}
+
+#contact_us_content{
+    text-align: left;
+    alignment: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50px;
+    border-color: blue;
+}
+
+#about_us:hover{
+    cursor: pointer;
+    background-color: lightblue;
+}
+
+#contact_us:hover{
+    cursor: pointer;
+    background-color: lightblue;
+}
+
+/*end of bottom menu design*/
+
+/*recommend.html design*/
+#recommend_label{
+    text-align: right;
+    color: white;
+    margin: 5vw 30vw 1vw 1vw;
+}
+
+#user_recommends{
+    alignment: center;
+    margin: 5vw 25vw 25vw 20vw;
+    color: whitesmoke;
+    border-color: blue;
+    border-radius: 50px;
+    border-style: solid;
+    background-color: blue;
+    padding: 5px;
+    min-width: fit-content;
+    min-height: fit-content;
+    text-align: center;
+}
+/*end of recommend.html design*/
 
