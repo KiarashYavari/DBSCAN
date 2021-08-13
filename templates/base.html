@@ -9,10 +9,11 @@
     <script src="{% static '../static/fontawesome-free-5.15.4-web/js/all.min.js' %}"></script>
 </head>
 <body>
-<div id="MrAdviser_logo"><img alt="MrAdviser_Logo" src="{% static '/../static/css/images/MrAdvisor_Logo.png' %}"></div>
+<div><img id="MrAdviser_logo" alt="MrAdviser_Logo" src="{% static '/../static/css/images/MrAdvisor_Logo.png' %}"><img id="MrAdvisor_logo_text" alt="logo_text" src="{% static '/css/images/logo_text_image.png' %}"></div>
 {% block body %}{% endblock %}
 <div id="bottom_menu"><ul>
     <li id="about_us" onclick="location.pathname='/about_us'"><i class='fas fa-user-friends' style='font-size:24px'></i>درباره ما</li>
-    <li id="contact_us" onclick="location.pathname='/contact_us'"><i class='fas fa-phone-volume' style='font-size:24px'></i>تماس با ما</li></ul></div>
+    <li id="contact_us" onclick="location.pathname='/contact_us'"><i class='fas fa-phone-volume' style='font-size:24px'></i>تماس با ما</li>
+    <li id="questionnaire" onclick="location.href='https://survey.porsline.ir/s/fTeTTkW'"><i style='font-size:24px' class='far'>&#xf15c;</i>تکمیل پرسشنامه</li></ul></div>
 </body>
 </html>
