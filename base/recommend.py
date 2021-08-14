@@ -34,12 +34,12 @@ class Recommend:
         for cluster in range(-1, clusters_counter - 2):
             count_i = len(Cluster_group.filter(clusters=cluster).filter(i_e_parameter='I'))
             count_e = len(Cluster_group.filter(clusters=cluster).filter(i_e_parameter='E'))
-            count_t = len(Cluster_group.filter(clusters=cluster).filter(i_e_parameter='T'))
-            count_f = len(Cluster_group.filter(clusters=cluster).filter(i_e_parameter='F'))
-            count_s = len(Cluster_group.filter(clusters=cluster).filter(i_e_parameter='S'))
-            count_n = len(Cluster_group.filter(clusters=cluster).filter(i_e_parameter='N'))
-            count_p = len(Cluster_group.filter(clusters=cluster).filter(i_e_parameter='P'))
-            count_j = len(Cluster_group.filter(clusters=cluster).filter(i_e_parameter='J'))
+            count_t = len(Cluster_group.filter(clusters=cluster).filter(t_f_parameter='T'))
+            count_f = len(Cluster_group.filter(clusters=cluster).filter(t_f_parameter='F'))
+            count_s = len(Cluster_group.filter(clusters=cluster).filter(s_n_parameter='S'))
+            count_n = len(Cluster_group.filter(clusters=cluster).filter(s_n_parameter='N'))
+            count_p = len(Cluster_group.filter(clusters=cluster).filter(p_j_parameter='P'))
+            count_j = len(Cluster_group.filter(clusters=cluster).filter(p_j_parameter='J'))
             if count_i > count_e:
                 if self.personality_factors[0] == 'I':
                     similarity_rate = 25 + similarity_rate
@@ -67,10 +67,9 @@ class Recommend:
             # check the most repeated factors for each clusters
             # save them in variables and compare
 
-            if similarity_rate > 0:
-                if similarity_rate >= 50:
-                    skills = list(Cluster_group.filter(clusters=cluster).values('skills').distinct())
-                    return self.convert_skills(skills)
-        skills = Cluster.objects.values('skills').annotate(count=Count('skills')).order_by("-count")
-        skills = list(skills.values('skills').first())
-        return self.convert_skills(skills)
+            if similarity_rate >= 70:
+                skills = list(Cluster_group.filter(clusters=cluster).values('skills').distinct())
+                return self.convert_skills(skills)
+        skills = list(Cluster.objects.values('skills').annotate(count=Count('skills')).order_by("-count"))
+        skills = skills[0]
+        return self.convert_skills([skills])
