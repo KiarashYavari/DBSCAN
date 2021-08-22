@@ -1,5 +1,5 @@
 body{
-    background: url('images/background_photo.png') no-repeat center fixed;
+    background: url('images/background_photo.jpg') no-repeat center fixed;
     background-size: 100% 100%;
 }
 .main_form{
@@ -32,6 +32,7 @@ body{
 #main_form_label{
     min-width: 100px;
     min-height: 50px;
+    direction: rtl;
 }
 /* logo style begin*/
 #MrAdviser_logo{
@@ -87,15 +88,19 @@ body{
     color: white;
     border-radius: 50px;
     border-color: blue;
+    direction: rtl;
 }
 
 #contact_us_content{
-    text-align: left;
+    text-align: right;
     alignment: center;
     justify-content: center;
     color: white;
-    border-radius: 50px;
+    border-radius: 0.01vw;
     border-color: blue;
+    min-width: content-box;
+    min-height: content-box;
+    direction: rtl;
 }
 
 #about_us:hover{
@@ -119,14 +124,16 @@ body{
 
 /*recommend.html design*/
 #recommend_label{
+    alignment: right;
     text-align: right;
     color: white;
     margin: 5vw 30vw 1vw 1vw;
+    direction: rtl;
 }
 
 #user_recommends{
     alignment: center;
-    margin: 5vw 25vw 25vw 20vw;
+    margin: 5vw 25vw 21vw 20vw;
     color: whitesmoke;
     border-color: blue;
     border-radius: 50px;

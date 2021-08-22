@@ -4,7 +4,7 @@
 {% block body %}
 <form method="post" class="main_form">
     {% csrf_token %}
-    <h3 id="main_form_label">:فاکتورهای شخصیت شما</h3>
+    <h3 id="main_form_label">فاکتورهای شخصیت شما:</h3>
     {{ form }}
     <input type="submit" value="!بررسی کن" id = "form_button">
 </form>
