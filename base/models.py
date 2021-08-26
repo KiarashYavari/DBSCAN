@@ -23,6 +23,7 @@ class Cluster(models.Model):
     p_j_parameter = models.CharField(max_length=1, null=False, default='P')
     clusters = models.FloatField(null=False, default=1)
 
+
 # records added
 # for index in range(len(dataset)):
 #     new_class = Cluster()
@@ -40,4 +41,3 @@ class Cluster(models.Model):
 #     new_class.p_j_parameter = dataset.iloc[index, 12]
 #     new_class.clusters = dataset.iloc[index, 13]
 #     new_class.save()
-

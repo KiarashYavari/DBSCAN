@@ -25,6 +25,20 @@ class Recommend:
                 recommend.append('Wordpress')
             elif 6 in list_skills[index].values():
                 recommend.append('Python')
+            elif 7 in list_skills[index].values():
+                recommend.append("[PHP + Javascript together]")
+            elif 8 in list_skills[index].values():
+                recommend.append("[Python + Javascript together]")
+            elif 9 in list_skills[index].values():
+                recommend.append("[PHP + Wordpress + Javascript together]")
+            elif 10 in list_skills[index].values():
+                recommend.append("[Html,Css + Javascript together]")
+            elif 11 in list_skills[index].values():
+                recommend.append("[Html,Css + PHP together]")
+            elif 12 in list_skills[index].values():
+                recommend.append("[PHP + Wordpress together]")
+            elif 13 in list_skills[index].values():
+                recommend.append("[PHP + Python together]")
         return recommend
 
     def calculate_similarity(self):
