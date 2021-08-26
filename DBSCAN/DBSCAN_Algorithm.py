@@ -37,13 +37,13 @@ data_principal.columns = ['P1', 'P2']
 
 # build clusters and label them
 # Numpy array of all the cluster labels assigned to each data point
-db_default = DBSCAN(eps=0.1555, min_samples=2).fit(data_principal)
+db_default = DBSCAN(eps=0.12, min_samples=2).fit(data_principal)
 labels = db_default.labels_
 
 # Building the label to colour mapping
 
 # Building the colour vector for each data point
-# # cvec = [colours1[label] for label in labels]
+# cvec = [colours1[label] for label in labels]
 # color_map = []
 # for i in range(0, max(labels) + 2):
 #     r = lambda: random.randint(0, 255)
@@ -71,22 +71,19 @@ labels = db_default.labels_
 #     data_principal['P1'], data_principal['P2'], marker='o', c=color_map[8])
 # l = plt.scatter(
 #     data_principal['P1'], data_principal['P2'], marker='o', c=color_map[9])
+# s = plt.scatter(
+#     data_principal['P1'], data_principal['P2'], marker='o', c=color_map[10])
+# f = plt.scatter(
+#     data_principal['P1'], data_principal['P2'], marker='o', c=color_map[11])
 # plt.figure(figsize=(9, 9))
 # plt.scatter(data_principal['P1'], data_principal['P2'], c=cvec)
-# plt.legend((r, g, b, c, y, m, k, o, a, l),
-#            ('Label 0', 'Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5', 'Label 6', 'Label 7', 'Label 8', 'Label '
-#                                                                                                                '-1'),
-#            scatterpoints=1,
-#            loc='upper left',
-#            ncol=3,
-#            fontsize=8)
-# plt.show()
+plt.show()
 # saving clusters into the ../files/edited_dataset.csv
 clusters = labels
 df = pd.read_csv("../files/edited_dataset.csv")
 # calculate personality type
 # i-e s-n t-f p-j
-for pointer in range(53):
+for pointer in range(len(df)):
     i_e_row = df.iloc[[pointer], [9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57, 61, 65]]
     i_e_counter = i_e_row[i_e_row.values == 1].shape[0]
 
@@ -120,7 +117,7 @@ for pointer in range(53):
         dataframe.iloc[[pointer], [12]] = 'P'
     else:
         dataframe.iloc[[pointer], [12]] = 'J'
-# end of calculate
+# # end of calculate
 df.drop(df.iloc[:, 13:69], axis=1, inplace=True)
 df['clusters'] = clusters
 df.to_csv("../files/edited_dataset.csv")
