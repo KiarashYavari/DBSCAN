@@ -1,0 +1,171 @@
+body{
+    background: url('images/background_photo.jpg') no-repeat center fixed;
+    background-size: 100% 100%;
+}
+.main_form{
+    alignment: right;
+    text-align: right;
+    color: white;
+    margin: 7vw 40vw 20vw 35vw;
+}
+.main_form h3{
+    min-width: -webkit-max-content;
+    min-height: fit-content;
+    min-font-size: 14pt;
+    text-align: right;
+}
+#form_button{
+    color: white;
+    padding:10px 10px 10px 10px;
+    border-color: blue;
+    border-radius: 10px;
+    border-style: solid;
+    background-color: blue;
+    text-align: right;
+    margin: 20px 20px 20px 20px;
+}
+#form_button:hover{
+    border-color: aquamarine;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+#main_form_label{
+    min-width: 100px;
+    min-height: 50px;
+    direction: rtl;
+}
+/* logo style begin*/
+#MrAdviser_logo{
+    height: 5vw;
+    width: 5vw;
+    min-height: 100px;
+    min-width: 80px;
+}
+#MrAdvisor_logo_text{
+    height: 5vw;
+    width: 5vw;
+    min-height: 100px;
+    min-width: 200px;
+    margin-left: -1.5vw;
+}
+/*logo style end*/
+
+/* bottom menu design*/
+#bottom_menu ul{
+  border-radius: 50px;
+  border-style: solid;
+  border-color: azure;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: azure;
+  min-width: max-content;
+}
+
+#bottom_menu li {
+   alignment: center;
+    float: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#about_us{
+     margin-left: 2vw;
+     margin-right: 35vw;
+     min-width: content-box;
+}
+
+#questionnaire{
+    margin-right: 2vw;
+    margin-left: 20vw;
+    min-width: content-box;
+    min-height: content-box;
+}
+
+#about_us_content{
+    text-align: right;
+    alignment: center;
+    color: white;
+    border-radius: 50px;
+    border-color: blue;
+    direction: rtl;
+}
+
+#contact_us_content{
+    text-align: right;
+    alignment: center;
+    justify-content: center;
+    color: white;
+    border-radius: 0.01vw;
+    border-color: blue;
+    min-width: content-box;
+    min-height: content-box;
+    direction: rtl;
+}
+
+#about_us:hover{
+    cursor: pointer;
+    background-color: lightblue;
+    border-radius: 5px;
+}
+
+#contact_us:hover{
+    cursor: pointer;
+    background-color: lightblue;
+    border-radius: 5px;
+}
+#questionnaire:hover{
+    cursor: pointer;
+    background-color: lightblue;
+    border-radius: 5px;
+}
+
+/*end of bottom menu design*/
+
+/*recommend.html design*/
+#recommend_label{
+    alignment: right;
+    text-align: right;
+    color: white;
+    margin: 5vw 30vw 1vw 1vw;
+    direction: rtl;
+}
+
+#user_recommends{
+    alignment: center;
+    margin: 5vw 25vw 21vw 20vw;
+    color: whitesmoke;
+    border-color: blue;
+    border-radius: 50px;
+    border-style: solid;
+    background-color: blue;
+    padding: 5px;
+    min-width: fit-content;
+    min-height: fit-content;
+    text-align: center;
+}
+/*end of recommend.html design*/
+/*begin the about page stylesheet*/
+#about_us_content{
+    text-align: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: blue;
+    background-color: blue;
+    margin: 10vw 23vw 22vw 23vw;
+    min-width: fit-content;
+    min-height: fit-content;
+}
+/*end of about page stylesheet*/
+/*begin style design of contact_us page*/
+#contact_us_content{
+    text-align: center;
+    alignment: left;
+    color: white;
+    border-color: blue;
+    border-style: solid;
+    border-radius: 50px;
+    background-color: blue;
+    margin: 10vw 35vw 24vw 35vw;
+}
+/*end of design contact_us page*/
