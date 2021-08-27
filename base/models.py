@@ -1,11 +1,11 @@
 # creating my data-table models here
 # cluster model for all cluster tables
-# import pandas as pd
+import pandas as pandad
 
 # create a model for all clusters
 from django.db import models
 # un comment for adding records to table
-# dataset = pd.read_csv('../static/files/edited_dataset.csv')
+dataset = pandad.read_csv('E://Prj-karshenasi/webApp_codes/static/files/edited_dataset.csv')
 
 
 class Cluster(models.Model):
