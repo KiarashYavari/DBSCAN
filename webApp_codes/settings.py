@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+from django.core.management.utils import get_random_secret_key
+
 import django_heroku
 from pathlib import Path
 
@@ -26,8 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-x-z$7q7^bq+cw=i_j^=0z%y1cfg7df-c@h0e%#3yuh5tj!=dr$'
-with open(os.path.join(BASE_DIR, 'secretkey.txt')) as f:
-    SECRET_KEY = f.read().strip()
+SECRET_KEY = get_random_secret_key()
 # dotenv_file = os.path.join(BASE_DIR, ".env")
 # if os.path.isfile(dotenv_file):
 #     dotenv.load_dotenv(dotenv_file)
