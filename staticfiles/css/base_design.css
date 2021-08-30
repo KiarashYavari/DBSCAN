@@ -82,27 +82,6 @@ body{
     min-height: content-box;
 }
 
-#about_us_content{
-    text-align: right;
-    alignment: center;
-    color: white;
-    border-radius: 50px;
-    border-color: blue;
-    direction: rtl;
-}
-
-#contact_us_content{
-    text-align: right;
-    alignment: center;
-    justify-content: center;
-    color: white;
-    border-radius: 0.01vw;
-    border-color: blue;
-    min-width: content-box;
-    min-height: content-box;
-    direction: rtl;
-}
-
 #about_us:hover{
     cursor: pointer;
     background-color: lightblue;
@@ -152,20 +131,27 @@ body{
     border-style: solid;
     border-color: blue;
     background-color: blue;
-    margin: 10vw 23vw 22vw 23vw;
+    alignment: center;
+    color: white;
+    direction: rtl;
+    margin: 10vw 23vw 18vw 23vw;
     min-width: fit-content;
     min-height: fit-content;
 }
 /*end of about page stylesheet*/
 /*begin style design of contact_us page*/
 #contact_us_content{
-    text-align: center;
-    alignment: left;
     color: white;
     border-color: blue;
     border-style: solid;
-    border-radius: 50px;
     background-color: blue;
-    margin: 10vw 35vw 24vw 35vw;
+    text-align: right;
+    alignment: center;
+    justify-content: center;
+    border-radius: 0.5vw;
+    direction: rtl;
+    margin: 10vw 23vw 23vw 23vw;
+    min-width: fit-content;
+    min-height: fit-content;
 }
 /*end of design contact_us page*/
